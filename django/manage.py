@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# source venv/bin/activate
 import os
 import sys
 
