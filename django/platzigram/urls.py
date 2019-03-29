@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 # from django.contrib import admin
-from platzigram import vistas
-
+from platzigram import vistas as local_views # Se renombran las vistas en ambos casos para poder trabajar as...
+from posts import views as posts_views
 
 urlpatterns = [
-    url('hello/', vistas.hello_world),
-    url('sorted/', vistas.sorted_integers), #sorted/?numbers=3,58,78,3 lo que ingresamos en el navegador
-    url('hi/<str:name>/<int:age>/',vistas.say_hi), 
-
+    url('hello/', local_views.hello_world),
+    url('sorted/', local_views.sorted_integers), #sorted/?numbers=3,58,78,3 lo que ingresamos en el navegador
+    url('hi/<str:name>/<int:age>/', local_views.say_hi), 
+    url('posts/', posts_views.list_posts),
     # url(r'^admin/', admin.site.urls),
 ]
