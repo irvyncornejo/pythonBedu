@@ -73,6 +73,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'platzigram.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
